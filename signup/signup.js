@@ -36,6 +36,12 @@ let StoreSignUpCred = () => {
             user_data.push(user_details);
 
             localStorage.setItem('user_credentials', JSON.stringify(user_data));
+
+            catchElem('#user_name').value = '';
+            catchElem('#user_mail').value = '';
+            catchElem('#user_password').value = '';
+
+            alert('Signup success!')
         }
         else {
             console.log('User Email already exists!');

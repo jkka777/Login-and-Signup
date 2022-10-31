@@ -32,6 +32,9 @@ let UserLoginCred = () => {
             localStorage.setItem('login_users', JSON.stringify(login_credentials));
 
             alert('Login Success!');
+
+            catchElem('#email').value = '';
+            catchElem('#password').value = '';
         }
         else {
 
@@ -40,6 +43,7 @@ let UserLoginCred = () => {
             alert('Wrong Password or Incorrect Email entered. Please check and type again!');
         }
     }
+
 };
 
 catchElem('.login').addEventListener('click', UserLoginCred);
